@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form'
 
 
 function Login() {
-    const navigate = useDispatch()
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const { register, handleSubmit } = useForm()
     const [error, setError] = useState("")
@@ -19,7 +19,7 @@ function Login() {
             const session = await authService.login(data)
             if (session) {
                 const userData = await authService.getCurrentUser()
-                if (userData) dispatch(authLogin(userData))
+                if (userData) dispatch(authLogin(userData));
                 navigate("/")
             }
         } catch (error) {
