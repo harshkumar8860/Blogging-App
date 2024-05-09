@@ -1,11 +1,13 @@
-    import conf from '../conf/conf.js'
-    import { Client, Account, ID } from "appwrite";
+import conf from '../conf/conf.js'
+import { Client, Account, ID } from "appwrite";
 
 
 export class AuthService {
+    // 2 properties
     client = new Client();
     account;
 
+    // whenever a object is made this will be called
     constructor() {
         this.client
             .setEndpoint(conf.appwriteUrl)
@@ -16,7 +18,7 @@ export class AuthService {
     async createAccount({ email, password, name }) {
         try {
             const userAccount = await this.account.create
-             (ID.unique(), email, password, name);
+                (ID.unique(), email, password, name);
             if (userAccount) {
                 // call another method
                 return this.login(email, password)
@@ -54,6 +56,7 @@ export class AuthService {
     }
 }
 
+// object created so user can directly use the methods
 const authService = new AuthService();
 
 export default authService;

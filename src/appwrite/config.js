@@ -137,6 +137,7 @@ export class Service {
             fileId
         )
     }
+
     // task
     // download file
     downloadFile() {
@@ -145,12 +146,7 @@ export class Service {
             fileId
         )
     }
-
-
 }
-
-
-
 
 const service = new Service();
 export default service
