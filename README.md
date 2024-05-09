@@ -9,16 +9,10 @@ Currently, two official plugins are available:
 
 
 * Install All dependencies first
-- npm i @reduxjs/toolkit 
-- npm i react-redux
-- npm i react-router-dom
-- npm i appwrite
-- npm i @tinymce/tinymce-react
-- npm i html-react-parser
-- npm i react-hook-form
- and install Tailwind CSS
-* Setup Environment Variables
+- npm i @reduxjs/toolkit react-redux react-router-dom appwrite @tinymce/tinymce-react html-react-parser react-hook-form
+- and install Tailwind CSS
 
+* Setup Environment Variables
 - VITE_APPWRITE_URL="test environment"
 - VITE_APPWRITE_PROJECT-ID=""
 - VITE_APPWRITE_DATABASE-ID=""
