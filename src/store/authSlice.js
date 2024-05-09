@@ -5,7 +5,7 @@ const initialState = {
     userData: null,
 }
 
-const authService = createSlice({
+const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
@@ -24,6 +24,6 @@ const authService = createSlice({
 
 // create slice of post as assignment 
 
-export const { login, logout } = authService.actions;
+export const { login, logout } = authSlice.actions;
 
-export default authService.reducer;
+export default authSlice.reducer;
