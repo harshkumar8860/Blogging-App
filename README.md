@@ -21,8 +21,21 @@ Currently, two official plugins are available:
 
 * Setup to access environment vairables in conf
 
-* Setup services keeping verdor lock-in in mind, in auth(account creation service) and config(database and storage service)
+* Setup services keeping verdor lock-in in mind(keeping code such that we can change our backend whenever we want), for auth(account creation service) and config(database and storage service)
 
 * Setup Redux-toolkit, store and reducers of AuthSlice, assignment PostSlice
 
+* Create Components, App.jsx, main.jsx
+
 * Creating RTE(Real Time Editor)
+
+* Creating Forms and handling Slug
+
+* Building Pages
+
+* Routing
+
+* Debugging and Deployment
+
+- What we've learned?
+- Signup, login, logout redux/context, routing, CRUD, file handling, Auth, Database, file management

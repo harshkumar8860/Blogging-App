@@ -19,12 +19,14 @@ export default function Protected({ children,
         //     navigate('/login')
         // }
 
-        let authValue = authStatus === true ? true : false
+        // let authValue = authStatus === true ? true : false
 
         // true && false !== true
+        // true && true (then navigate to login)
         if (authentication && authStatus !== authentication) {
             navigate("/login")
             // false && true !== true
+            // false && false
         } else if (!authentication && authStatus !==
             authentication) {
             navigate("/")
