@@ -1,5 +1,6 @@
 import conf from '../conf/conf.js'
 import { Client, ID, Databases, Storage, Query } from "appwrite";
+// Database
 
 export class Service {
     client = new Client();
@@ -94,6 +95,7 @@ export class Service {
                 // or this, if variable is not made
                 // [
                 //     Query.equal("status", "active")
+                //     Query.equal("status", ["active"])
                 // ],
             )
         } catch (error) {
@@ -124,6 +126,7 @@ export class Service {
                 conf.appwriteBucketId,
                 fileId
             )
+            return true;
         } catch (error) {
             console.log("Appwrite service :: deleteFile:: error", error);
             return false;
@@ -131,7 +134,7 @@ export class Service {
     }
 
     // get file preview
-    getFilePreview() {
+    getFilePreview(fileId) {
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
             fileId
@@ -140,7 +143,7 @@ export class Service {
 
     // task
     // download file
-    downloadFile() {
+    downloadFile(fileId) {
         return this.bucket.getFileDownload(
             conf.appwriteBucketId,
             fileId
